@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login <form action=""></form> in HTML and CSS </title>
+   <style>
+    body{
+        background-image:url(office1.jpeg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+   </style>
+</head>
+<body style="background-color: antiquewhite;">
+    
+    <center> 
+    <div class="wrapper">
+        <form action="">
+            <h1>Login</h1> 
+            <div class="input-box">
+                <input type="text" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Remember me</label>
+                <a href="#">forgot password?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="Loginform.html"></div>
+            <p> Don't have an account?
+                <a href="Registration1.html">Register</a></p>
+        </div>
+            
+        </form>
+    </div>
+    </center>
+    <script>
+  function Login()
+  {
+  var inputbox=document.getElementById("email")
+var email=inputbox.value 
+var inputbox1=document.getElementById("password")
+var password=inputbox1.value
+if(email == "muralimahesh333@gmail.com" && password == "Krishna")
+{
+  open("Navbar.html")
+}
+else if(email != ":muralimahesh333@gmail.com"){
+  alert("Please enter  valid email ")
+}
+else{
+  alert("Please enter  valid password ")
+}
+}
+</script>
+
+</body>
+</html>  
