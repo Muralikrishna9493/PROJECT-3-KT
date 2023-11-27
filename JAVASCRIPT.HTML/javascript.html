@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Example</title>
+</head>
+
+<body>
+
+    <button id="myButton">Click me!</button>
+
+    <div id="results"></div>
+
+    <script>
+        
+        function addNumbers(a, b) {
+           
+            return a + b;
+        }
+
+        const person = {
+            firstName: "John",   
+            lastName: "Doe",     
+            age: 30                
+        };
+
+        const numbers = [1, 2, 3, 4, 5];
+
+        const doubledNumbers = numbers.map(function (number) {
+            return number * 2;
+        });
+
+        const evenNumbers = numbers.filter(function (number) {
+            return number % 2 === 0;
+        });
+
+        const button = document.getElementById('myButton');
+
+        const resultsDiv = document.getElementById('results');
+        function handleClick(event) {
+            
+            const sum = addNumbers(5, 3);
+
+            resultsDiv.innerHTML = `Hello, ${person.firstName} ${person.lastName} (age: ${person.age})<br>`;
+            resultsDiv.innerHTML += `Doubled Numbers: ${doubledNumbers.join(', ')}<br>`;
+            resultsDiv.innerHTML += `Even Numbers: ${evenNumbers.join(', ')}<br>`;
+            resultsDiv.innerHTML += `Sum of 5 and 3: ${sum}`;
+        }
+            button.addEventListener('click', handleClick);
+
+    </script>
+</body>
+
+</html>

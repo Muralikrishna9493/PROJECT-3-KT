@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Arrays Example</title>
+</head>
+
+<body>
+    <h1>Working with Arrays</h1>
+    <p id="arrayOutput"></p>
+
+    <script>
+       
+        const arrayOutput = document.getElementById('arrayOutput');
+
+        const fruits = ["Apple", "Banana", "Cherry", "Date"];
+        const people = [
+            {
+                name: "John",
+                age: 30,
+                city: "New York",
+            },
+            {
+                name: "Alice",
+                age: 25,
+                city: "Los Angeles",
+            },
+            {
+                name: "Bob",
+                age: 35,
+                city: "Chicago",
+            },
+            {
+                name: "Eva",
+                age: 28,
+                city: "San Francisco",
+            }
+        ];
+
+        
+        arrayOutput.textContent = "Fruits: " + fruits.join(', ');
+
+       
+        const thirdFruit = fruits[2];
+        arrayOutput.innerHTML += "<br>Third fruit: " + thirdFruit;
+
+        
+        fruits.push("Elderberry");
+        arrayOutput.innerHTML += "<br>Fruits after adding Elderberry: " + fruits.join(', ');
+
+       
+        const removedFruit = fruits.pop();
+        arrayOutput.innerHTML += "<br>Removed fruit: " + removedFruit;
+
+      
+        fruits[1] = "Blueberry";
+        arrayOutput.innerHTML += "<br>Fruits after changing the second fruit: " + fruits.join(', ');
+
+       
+        const cherryIndex = fruits.indexOf("Cherry");
+        arrayOutput.innerHTML += "<br>Index of Cherry: " + cherryIndex;
+
+
+        const hasGrape = fruits.includes("Grape");
+        arrayOutput.innerHTML += "<br>Does the array have Grape? " + (hasGrape ? "Yes" : "No");
+    </script>
+</body>
+
+</html>
